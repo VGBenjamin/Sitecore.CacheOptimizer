@@ -1,0 +1,48 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@using Sitecore.Web.UI.Controls.Common.UserControls
+@model RenderingModel
+@{
+  var rendering = Html.Sitecore().Controls().GetUserControl(Model.Rendering);
+  rendering.Class = "sc-CacheOptimizer";
+  rendering.Requires.Script("client", "CacheOptimizer.js");
+
+  rendering.GetString("input", "input");
+  var htmlAttributes = rendering.HtmlAttributes;
+}      
+<div @htmlAttributes>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Sublayout path</th>
+                <th>Enable Datasource Query</th>
+                <th>Cacheable</th>
+                <th>Clear on Index Update</th>
+                <th>VaryByData</th>
+                <th>VaryByRenderingParam</th>
+                <th>VaryByQueryString</th>
+                <th>VaryByDevice</th>
+                <th>VaryByLogin</th>
+                <th>VaryByUser</th>
+                <th>References</th>
+            </tr>
+        </thead>
+        
+        <tbody data-bind="foreach: output">
+            <tr>
+                <td data-bind="text: Path"></td>
+                <td data-bind="text: DatasourceQuery"></td>
+                <td data-bind="text: Cacheable"></td>
+                <td data-bind="text: ClearOnIndex"></td>
+                <td data-bind="text: VaryByData"></td>
+                <td data-bind="text: VaryByRP"></td>
+                <td data-bind="text: VaryByQS"></td>
+                <td data-bind="text: VaryByDevice"></td>
+                <td data-bind="text: VaryByLogin"></td>
+                <td data-bind="text: VaryByUser"></td>
+                <td data-bind="text: Referers"></td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

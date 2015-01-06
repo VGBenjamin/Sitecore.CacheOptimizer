@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <Site Server="dehub.lbi.com" UserName="sitecore\admin" IsRemoteSitecore="True" />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="sitecore\shell\client\YourApps\CacheOptimizer.SPEAK\CacheOptimizer.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+      <Item DatabaseName="core">{ED8A8AFB-7D53-4571-AD89-1CECABE72760}</Item>
+    </File>
+  </ItemGroup>
+</Project>
